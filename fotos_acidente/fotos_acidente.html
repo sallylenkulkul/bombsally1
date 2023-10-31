@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="fotos_acidente.css">
+    <title>Fotos do Acidente</title>
+</head>
+ 
+<body>
+    <div class="cabecalho">
+        <img src="menu.png" width="350px" class="menu">
+    </div>
+    
+    <div class="titulo">
+        Fotos do Acidente
+    </div>
+
+    <div class="profile3">
+        <div class="selecao">
+            <h3>Importe as fotos do acidente aqui</h3>
+
+            <div id="image-container" class="img">
+            </div>
+            <form action="salvar_imagem.php" method="post" enctype="multipart/form-data">
+                <input type="file" id="image-input" name="foto" accept="image/*" class="envimg"
+                style="display: none" multiple onchange="sendImage()"><br>
+                <div class="selecione" value="foto" id="selecione" onclick="openFileInput()">Selecione uma Imagem</div>
+
+                <br><br><br>
+            </form>
+                
+
+        </div>
+        <br>
+        <div class="botao">
+            <button type="submit" class="prox">Próximo</button>
+        </div>
+
+        <script src="sinais.js"></script>
+    </div>
+</body>
+
+
+<script>
+    function openFileInput() {
+        document.getElementById('image-input').click();
+    }
+    function sendImage() {
+        var input = document.getElementById('image-input');
+        var container = document.getElementById('image-container');
+
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+                var img = document.createElement('img');
+                img.src = e.target.result;
+                img.classList.add('image-preview');
+                container.innerHTML = '';
+                container.appendChild(img);
+            }
+
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+
+
+    // Manipulação de eventos de envio de fotos
+    const form = document.querySelector('form');
+    const gallery = document.querySelector('.gallery');
+
+    const formData = new FormData(form);
+
+    for (const file of formData.getAll('photo[]')) {
+        if (file.type.startsWith('image/')) {
+            const img = document.createElement('img');
+            img.src = URL.createObjectURL(file);
+            gallery.appendChild(img);
+        }
+    }
+
+    form.reset();
+
+</script>
+
+</html>

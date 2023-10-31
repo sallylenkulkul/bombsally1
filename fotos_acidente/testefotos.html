@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carregar Imagens</title>
+</head>
+<body>
+    <h1>Carregar Imagens</h1>
+
+    <!-- Input de arquivo para carregar imagens -->
+    <input type="file" id="imageInput" multiple accept="image/*">
+    
+    <!-- Div para exibir as imagens carregadas -->
+    <div id="imagePreview"></div>
+
+    <!-- JavaScript para lidar com o carregamento e exibição de imagens -->
+    <script>
+        const imageInput = document.getElementById('imageInput');
+        const imagePreview = document.getElementById('imagePreview');
+
+        // Evento para detectar quando as imagens são carregadas
+        imageInput.addEventListener('change', function () {
+            imagePreview.innerHTML = ''; // Limpa qualquer imagem anteriormente exibida
+
+            const files = imageInput.files;
+            for (let i = 0; i < files.length; i++) {
+                const file = files[i];
+                if (file.type.startsWith('image/')) {
+                    const img = document.createElement('img');
+                    img.src = URL.createObjectURL(file); // Cria uma URL temporária para a imagem
+                    img.style.maxWidth = '200px'; // Defina o tamanho máximo para a exibição
+
+                    imagePreview.appendChild(img); // Adiciona a imagem à visualização
+                }
+            }
+        });
+    </script>
+</body>
+</html>
