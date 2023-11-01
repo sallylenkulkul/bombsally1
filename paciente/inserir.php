@@ -1,10 +1,11 @@
 <?php
+session_start();
     include("conecta.php");
 
     $nome  = $_POST["nome"];
     $cpf   = $_POST["cpf"];
     $sexo  = $_POST["sexo"];
-    $sexo  = $_POST["sexo"];
+    $fone  = $_POST["fone"];
     $idade = $_POST["idade"];
     $hospital  = $_POST["hospital"];
     $acomp     = $_POST["acomp"];
@@ -13,17 +14,12 @@
     $data = $_POST["data"];
 
 
-    $comando = $pdo->prepare("INSERT INTO ficha_paciente VALUES('$NomePaciente',$CPF, '$Sexo', $Telefone, $IdadePaciente, '$NomeHospital',
-    '$NomeAcomp', '$IdadeAcomp', '$LocalOcorrencia', '$DataOcorrencia' )VALUES (:NomePaciente, :CPF, :Sexo, :Telefone, :IdadePaciente, :NomeHospital, :NomeAcomp, :IdadeAcomp, :LocalOcorrencia, :DataOcorrencia)" );
+    $comando = $pdo->prepare("INSERT INTO ficha_paciente VALUES ('','$nome','$cpf', '$sexo', $fone, $idade, '$hospital',
+    '$acomp', $idade_acomp, '$local', '$data' )");
     $resultado = $comando->execute();
 
-    if ($conn->connect_error) {
-        die("Erro na conexão com o banco de dados: " . $conn->connect_error);
-    }
+    $_SESSION["id"] = $pdo->lastInsertId();
 
-
-    // Para voltar no formulário:
-    header("Location: paciente.html");
-
+    echo ("{\"resposta\":1}");
 
 ?>
