@@ -96,3 +96,5 @@ h2 {
     background: linear-gradient(0deg, rgba(212, 31, 31, 1) 26%, rgba(141, 25, 28, 1) 100%);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
+
+input{font-family: 'Poppins', sans-serif;}
