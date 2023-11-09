@@ -5,7 +5,6 @@
         include("conecta3.php");
 
         $foto = $_POST["foto"];
-        $FK_IdOcorrencia = $_GET["FK_IdOcorrencia"]; 
         // Lê o conteúdo do arquivo de imagem e armazena na variável $imagem
 		$imagem = file_get_contents($_FILES["foto"]["tmp_name"]);
 		
