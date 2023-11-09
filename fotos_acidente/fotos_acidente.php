@@ -53,11 +53,11 @@ while( $linhas = $comando->fetch() )
             </div>
             <form action="salvar_imagem.php" method="post" enctype="multipart/form-data">
                 <input type="file" id="image-input" name="foto" accept="image/.jpg" class="envimg"><br>
-                
+                <br>
                 <div class="botao">
                     <button type="submit" class="prox">Gravar</button>
                 </div>
-                <br><br><br>
+                <br><br>
             </form>
                 
 

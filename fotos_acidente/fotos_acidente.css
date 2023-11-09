@@ -1,17 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 
+
 body {
     background-color: #f8e9ed;
     font-family: 'Poppins', sans-serif;
     font-weight: bold;
-    
+
 }
 
 .titulo {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 17%;
+    width: 19%;
     margin: 40px auto 0 auto;
     max-width: 500px;
     font-size: x-large;
@@ -23,14 +24,10 @@ body {
 
 }
 
-@media (max-width: 600px) {
-    .titulo {
-        font-size: x-large;
-        border-radius: 1em;
-        width: 75%;
-    }
+.envimg {
+    background-color: #0400A4;
+    color: white;
 }
-
 .legenda {
     display: flex;
     justify-content: center;
@@ -45,14 +42,13 @@ body {
     width: 100%;
     height: 100px;
     margin-left: -10px;
-    color: white;
+    margin-top: -7px;
     padding: 10px;
     display: flex;
-    align-items: center;
-    /* Alinhar verticalmente ao centro */
-    background: rgb(212,31,31);
-    background: linear-gradient(0deg, rgba(212,31,31,1) 26%, rgba(141,25,28,1) 100%);    
+    background: rgb(212, 31, 31);
+    background: linear-gradient(0deg, rgba(212, 31, 31, 1) 26%, rgba(141, 25, 28, 1) 100%);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    align-items: center;
 }
 
 h2 {
@@ -107,4 +103,96 @@ h2 {
 .gallery img {
     max-width: 100%;
     height: auto;
+}
+
+
+@media screen and (max-width: 360px) {
+    body {
+        background-color: #f8e9ed;
+        font-family: 'Poppins', sans-serif;
+        font-weight: bold;
+        margin: 0;
+        /* Adicionei para remover margens padrão */
+    }
+
+    .titulo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        /* Alterei para ocupar 80% da largura */
+        margin: 40px auto 0 auto;
+        max-width: 360px;
+        /* Definiu uma largura máxima */
+        font-size: large;
+        /* Alterei para um tamanho menor */
+        color: white;
+        background-color: #0400A4;
+        text-align: center;
+        border-radius: 20px;
+        /* Reduzi o raio da borda */
+    }
+
+    .legenda {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        margin: 20px auto 0 auto;
+        /* Reduzi a margem superior */
+        max-width: 360px;
+        font-size: medium;
+        /* Alterei para um tamanho menor */
+    }
+
+    .cabecalho {
+        width: 100%;
+        height: 80px;
+        /* Reduzi a altura do cabeçalho */
+        margin: 0;
+        color: white;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        background: rgb(212, 31, 31);
+        background: linear-gradient(0deg, rgba(212, 31, 31, 1) 26%, rgba(141, 25, 28, 1) 100%);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    h2 {
+        margin: 0;
+        /* Removi a margem padrão */
+    }
+
+    .prox {
+        width: 120px;
+        height: 30px;
+        margin-top: 2%;
+        background-color: #0400A4;
+        font-family: 'Poppins', sans-serif;
+        border: none;
+        color: white;
+        text-align: center;
+        font-size: small;
+        /* Alterei para um tamanho menor */
+        border-radius: 15px;
+        /* Reduzi o raio da borda */
+        cursor: pointer;
+        font-weight: bold;
+    }
+
+    /* Removi estilos desnecessários para dispositivos móveis */
+    .selecione,
+    .profile3,
+    .selecao {
+        width: 100%;
+        max-width: 360px;
+        margin: 0 auto;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+        /* Uma coluna para dispositivos móveis */
+    }
+
 }
