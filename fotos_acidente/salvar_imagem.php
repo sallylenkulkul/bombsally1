@@ -4,9 +4,9 @@
        // ATENÇÃO: o tipo da coluna na tabela deve ser MEDIUMBLOB
         include("conecta3.php");
 
-        $foto = $_POST["foto"];
+        $arquivo = $_POST["arquivo"];
         // Lê o conteúdo do arquivo de imagem e armazena na variável $imagem
-		$imagem = file_get_contents($_FILES["foto"]["tmp_name"]);
+		$arquivo = file_get_contents($_FILES["arquivo"]["tmp_name"]);
 		
 		$comando = $pdo->prepare("INSERT INTO fotos_acidente(FK_IdOcorrencia, arquivo) VALUES(:FK_IdOcorrencia, :arquivo)");
        
@@ -17,5 +17,6 @@
         // As linhas abaixo você usará sempre que quiser mostrar a imagem
 
         header("Location: fotos_acidente.php");
-		
+        $_SESSION["id"] = $pdo->lastInsertId();
+
 ?>

@@ -1,3 +1,5 @@
+
+
 <?php
 session_start();
 $FK_IdOcorrencia = $_SESSION["id"];
@@ -35,5 +37,6 @@ $FK_IdOcorrencia = $_SESSION["id"];
 
 
     echo ("{\"resposta\":1}");
+    $_SESSION["id"] = $pdo->lastInsertId();
 
 ?>

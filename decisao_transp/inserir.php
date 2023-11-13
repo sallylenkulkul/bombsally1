@@ -1,5 +1,7 @@
 <?php
 session_start();
+$FK_IdOcorrencia = $_SESSION["id"];
+
     include("conecta.php");
     
     $critico  = isset($_POST["critico"])?1:0;
@@ -8,9 +10,10 @@ session_start();
     $estavel  = isset($_POST["estavel"])?1:0;
 
 
-    $comando = $pdo->prepare("INSERT INTO decisao_transporte VALUES ($critico, $instavel, $pot_instavel, $estavel )");
-    $resultado = $comando->execute();
+    $comando = $pdo->prepare("INSERT INTO decisao_transporte VALUES ($FK_IdOcorrencia, $critico, $instavel, $pot_instavel, $estavel )");
+    $resultado = $comando->execute();//ERRO
 
     echo ("{\"resposta\":1}");
+    $_SESSION["id"] = $pdo->lastInsertId();
 
 ?>

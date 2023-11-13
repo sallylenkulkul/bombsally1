@@ -31,12 +31,12 @@ while( $linhas = $comando->fetch() )
     <link rel="stylesheet" href="fotos_acidente.css">
     <title>Fotos do Acidente</title>
 </head>
- 
+
 <body>
     <div class="cabecalho">
         <img src="menu.png" width="350px" class="menu">
     </div>
-    
+
     <div class="titulo">
         Fotos do Acidente
     </div>
@@ -52,20 +52,20 @@ while( $linhas = $comando->fetch() )
             <div id="image-container" class="img">
             </div>
             <form action="salvar_imagem.php" method="post" enctype="multipart/form-data">
-                <input type="file" id="image-input" name="foto" accept="image/.jpg" class="envimg"><br>
+                <input type="file" id="image-input" name="arquivo" accept="image/.jpg" class="envimg"><br>
                 <br>
                 <div class="botao">
                     <button type="submit" class="prox">Gravar</button>
                 </div>
                 <br><br>
             </form>
-                
+
 
         </div>
         <br>
-       
 
-      
+
+
     </div>
 </body>
 

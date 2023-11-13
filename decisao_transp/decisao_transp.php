@@ -21,7 +21,7 @@
         </div>
         
         <div class="ficha">
-            <form action="inserir.php" method="post">
+            <form action="INSERIR.PHP" method="post">
                 <div class="opcoes">
                     <div class="emoji">
                         <img src="emoji_critico.png" width="50px">

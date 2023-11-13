@@ -18,7 +18,7 @@
             <h2> Avaliação da Cinemática </h2> <br>
         </div>
         <div class="ficha">
-            <form action="av_cinem.html" method="post">
+            <form action="inserir.php" method="post">
                 <div class="forms">
                     <div class="opcoes">
                         <div class="d1">
@@ -27,9 +27,9 @@
                             </div>
                             <div class="p2">
                                 <div class="op">
-                                    <input type="radio" name="a"> &nbsp; Sim
-                                <br>
-                                    <input type="radio" name="a"> &nbsp; Não
+                                    <input type="radio" name="disturbio" value="Sim"> &nbsp; Sim
+                                    <br>
+                                    <input type="radio" name="disturbio" value="Não"> &nbsp; Não
                                 </div>
                             </div>
                         </div>
@@ -41,9 +41,9 @@
                             </div>
                             <div class="p2">
                                 <div class="op">
-                                    <input type="radio" name="a"> &nbsp; Sim
+                                    <input type="radio" name="capacete" value="Sim"> &nbsp; Sim
                                     <br>
-                                    <input type="radio" name="a"> &nbsp; Não
+                                    <input type="radio" name="capacete" value="Não"> &nbsp; Não
                                 </div>
                             </div>
                         </div>
@@ -55,9 +55,9 @@
                             </div>
                             <div class="p2">
                                 <div class="op">
-                                    <input type="radio" name="a"> &nbsp; Sim
+                                    <input type="radio" name="cinto" value="Sim"> &nbsp; Sim
                                     <br>
-                                    <input type="radio" name="a"> &nbsp; Não
+                                    <input type="radio" name="cinto" value="Não"> &nbsp; Não
                                 </div>
                             </div>
                         </div>
@@ -69,9 +69,9 @@
                             </div>
                             <div class="p2">
                                 <div class="op">
-                                    <input type="radio" name="a"> &nbsp; Sim
+                                    <input type="radio" name="parabrisa" value="Sim"> &nbsp; Sim
                                     <br>
-                                    <input type="radio" name="a"> &nbsp; Não
+                                    <input type="radio" name="parabrisa" value="Não"> &nbsp; Não
                                 </div>
                             </div>
                         </div>
@@ -83,9 +83,9 @@
                             </div>
                             <div class="p2">
                                 <div class="op">
-                                    <input type="radio" name="a"> &nbsp; Sim
+                                    <input type="radio" name="camin" value="Sim"> &nbsp; Sim
                                     <br>
-                                    <input type="radio" name="a"> &nbsp; Não
+                                    <input type="radio" name="camin" value="Não"> &nbsp; Não
                                 </div>
                             </div>
                         </div>
@@ -97,9 +97,9 @@
                             </div>
                             <div class="p2">
                                 <div class="op">
-                                    <input type="radio" name="a"> &nbsp; Sim
+                                    <input type="radio" name="painel" value="Sim"> &nbsp; Sim
                                     <br>
-                                    <input type="radio" name="a"> &nbsp; Não
+                                    <input type="radio" name="painel" value="Não"> &nbsp; Não
                                 </div>
                             </div>
                         </div>
@@ -111,9 +111,9 @@
                             </div>
                             <div class="p2">
                                 <div class="op">
-                                    <input type="radio" name="a"> &nbsp; Sim
+                                    <input type="radio" name="volante" value="Sim"> &nbsp; Sim
                                     <br>
-                                    <input type="radio" name="a"> &nbsp; Não
+                                    <input type="radio" name="volante" value="Não"> &nbsp; Não
                                 </div>
                             </div>
                         </div>
