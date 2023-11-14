@@ -4,16 +4,14 @@ $FK_IdOcorrencia = $_SESSION["id"];
 
     include("conecta.php");
     
-    $critico  = isset($_POST["critico"])?1:0;
-    $instavel  = isset($_POST["instavel"])?1:0;
-    $pot_instavel  = isset($_POST["pot_instavel"])?1:0;
-    $estavel  = isset($_POST["estavel"])?1:0;
+    $decisao_transp  = $_POST["decisao_transp"];
 
-
-    $comando = $pdo->prepare("INSERT INTO decisao_transporte VALUES ($FK_IdOcorrencia, $critico, $instavel, $pot_instavel, $estavel )");
+    $comando = $pdo->prepare("INSERT INTO decisao_transporte (FK_IdOcorrencia, decisao_transp) VALUES (:FK_IdOcorrencia,:decisao_transp)");
+    $comando->bindParam(":FK_IdOcorrencia", $FK_IdOcorrencia);
+    $comando->bindParam(":decisao_transp", $decisao_transp);
     $resultado = $comando->execute();//ERRO
 
     echo ("{\"resposta\":1}");
-    $_SESSION["id"] = $pdo->lastInsertId();
+    //$_SESSION["id"] = $pdo->lastInsertId();
 
 ?>

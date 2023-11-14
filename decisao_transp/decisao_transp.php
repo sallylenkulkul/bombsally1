@@ -21,23 +21,23 @@
         </div>
         
         <div class="ficha">
-            <form action="INSERIR.PHP" method="post">
+            <form action="inserir.php" method="post">
                 <div class="opcoes">
                     <div class="emoji">
                         <img src="emoji_critico.png" width="50px">
-                        <input type="radio" name="critico" class="op" > Crítico <br><br>
+                        <input type="radio" name="decisao_transp" class="op" value="critico"> Crítico <br><br>
                     </div>
                     <div class="emoji">
                         <img src="emoji_instavel.png" width="50px">
-                        <input type="radio" name="instavel" class="op" > Instável <br><br>
+                        <input type="radio" name="decisao_transp" class="op" value="instavel"> Instável <br><br>
                     </div>
                     <div class="emoji">
                         <img src="emoji_pot_instavel.png" width="50px">
-                        <input type="radio" name="pot_instavel" class="op" > Potencialmente <br> instável <br><br>
+                        <input type="radio" name="decisao_transp" class="op" value="potencialmente instavel"> Potencialmente <br> instável <br><br>
                     </div>
                     <div class="emoji">
                         <img src="emoji_instavel.png" width="50px">
-                        <input type="radio" name="estavel" class="op" > Estável <br>
+                        <input type="radio" name="decisao_transp" class="op" value="estavel"> Estável <br>
                     </div>
                 </div>
                 <br>

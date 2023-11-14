@@ -2,7 +2,7 @@
 session_start();
 $FK_IdOcorrencia = $_SESSION["id"];
 
-include("conecta3.php");
+include("conecta.php");
 
 $comando = $pdo->prepare("SELECT * FROM fotos_acidente where FK_IdOcorrencia = $FK_IdOcorrencia");
 $resultado = $comando->execute();
@@ -52,7 +52,7 @@ while( $linhas = $comando->fetch() )
             <div id="image-container" class="img">
             </div>
             <form action="salvar_imagem.php" method="post" enctype="multipart/form-data">
-                <input type="file" id="image-input" name="arquivo" accept="image/.jpg" class="envimg"><br>
+                <input type="file" id="image-input" name="arquivo" accept="image/.jpeg" class="envimg"><br>
                 <br>
                 <div class="botao">
                     <button type="submit" class="prox">Gravar</button>

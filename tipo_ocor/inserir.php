@@ -29,12 +29,13 @@ $FK_IdOcorrencia = $_SESSION["id"];
     
 
 
-    $comando = $pdo->prepare("INSERT INTO tipo_ocorrencia VALUES ($FK_IdOcorrencia, $causado, $transporte, $desmor, $emerg, $queda2m, $suicidio, $quedaaltura, $afogamento, $agressao, $atrop, 
-    $choque, $desab, $dom, $esp, $intox, $quedabic, $quedamoto, $quedamenor2m, $trabalho, $transf, $outrotext )");
+    $comando = $pdo->prepare("INSERT INTO tipo_ocorrencia VALUES ($FK_IdOcorrencia, $causado, $transporte, 
+    $desmor, $emerg, $queda2m, $suicidio, $quedaaltura, $afogamento, $agressao, $atrop, $choque, $desab, 
+    $dom, $esp, $intox, $quedabic, $quedamoto, $quedamenor2m, $trabalho, $transf, $outrotext )");
     $resultado = $comando->execute();
 
 
     echo ("{\"resposta\":1}");
-    $_SESSION["id"] = $pdo->lastInsertId();
+    //_SESSION["id"] = $pdo->lastInsertId();
 
 ?>
