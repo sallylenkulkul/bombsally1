@@ -74,7 +74,6 @@ $FK_IdOcorrencia = $_SESSION["id"];
     $taquip  = isset($_POST["taquip"])?1:0;
     $taquic  = isset($_POST["taquic"])?1:0;
     $tontura  = isset($_POST["tontura"])?1:0;
-    $outro  = isset($_POST["outro"])?1:0;
     $outrotext  = isset($_POST["outrotext"])?1:0;
 
 
@@ -84,12 +83,12 @@ $FK_IdOcorrencia = $_SESSION["id"];
     :cianose, :labios, :ext, :conv, :decort, :deform, :descereb, :desmaio, :desviotraq, :disp, :dorlocal, :edema, :general, :local, 
     :enfis, :estase, :face, :hemorr, :interna, :externa, :hiper, :hipo, :nausea, :nasor, :obito, :otorreia, :otorragia, :parada, :card, 
     :resp, :ovace, :priap, :prurido, :pupilas, :anisocoria, :isocoria, :midriase, :miose, :reag, :nreag, :sede, :battle, 
-    :guax, :taquip, :taquic, :tontura, :outro, :outrotext)");
+    :guax, :taquip, :taquic, :tontura, ':outrotext')");
     $resultado = $comando->execute();
 
 
     echo ("{\"resposta\":1}");
-    $_SESSION["id"] = $pdo->lastInsertId();
+    //$_SESSION["id"] = $pdo->lastInsertId();
 
 ?>
 

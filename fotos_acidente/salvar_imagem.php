@@ -2,7 +2,7 @@
        session_start();
        $FK_IdOcorrencia = $_SESSION["id"];
        // ATENÇÃO: o tipo da coluna na tabela deve ser MEDIUMBLOB
-        include("conecta3.php");
+        include("conecta.php");
 
         $arquivo = $_FILES["arquivo"]["tmp_name"];
         // Lê o conteúdo do arquivo de imagem e armazena na variável $imagem

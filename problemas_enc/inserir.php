@@ -1,40 +1,39 @@
 <?php
 session_start();
-$FK_IdOcorrencia = $_SESSION["id"];
+$FK_IdOcorrencia = 43;//$_SESSION["id"];
 
     include("conecta.php");
 
-    $causado  = isset($_POST["causado"])?1:0;
-    $transporte  = isset($_POST["transporte"])?1:0;
-    $desmor  = isset($_POST["desmor"])?1:0;
+    $psiquiatrico  = isset($_POST["psiquiatrico"])?1:0;
+    $respiratorio  = isset($_POST["respiratorio"])?1:0;
+    $dpoc  = isset($_POST["dpoc"])?1:0;
+    $inalac  = isset($_POST["inalac"])?1:0;
+    $diabete  = isset($_POST["diabete"])?1:0;
+    $hiperg  = isset($_POST["hiperg"])?1:0;
+    $hipog  = isset($_POST["hipog"])?1:0;
+    $outrotext1  = isset($_POST["outrotext1"])?'1':'0';
+
+    $obstet  = isset($_POST["obstet"])?1:0;
+    $parto  = isset($_POST["parto"])?1:0;
+    $gestante  = isset($_POST["gestante"])?1:0;
+    $hemorrexc  = isset($_POST["hemorrexc"])?1:0;
+    $transp  = isset($_POST["transp"])?1:0;
+    $aereo  = isset($_POST["aereo"])?1:0;
+    $clinico  = isset($_POST["clinico"])?1:0;
     $emerg  = isset($_POST["emerg"])?1:0;
-    $queda2m  = isset($_POST["queda2m"])?1:0;
-    $suicidio  = isset($_POST["suicidio"])?1:0;
-    $quedaaltura  = isset($_POST["quedaaltura"])?1:0;
-    $afogamento  = isset($_POST["afogamento"])?1:0;
-    $agressao  = isset($_POST["agressao"])?1:0;
-    $atrop  = isset($_POST["atrop"])?1:0;
-    $choque  = isset($_POST["choque"])?1:0;
-    $desab  = isset($_POST["desab"])?1:0;
-    $dom  = isset($_POST["dom"])?1:0;
-    $esp  = isset($_POST["esp"])?1:0;
-    $intox  = isset($_POST["intox"])?1:0;
-    $quedabic  = isset($_POST["quedabic"])?1:0;
-    $quedamoto  = isset($_POST["quedamoto"])?1:0;
-    $quedamenor2m  = isset($_POST["quedamenor2m"])?1:0;
-    $trabalho  = isset($_POST["trabalho"])?1:0;
-    $transf  = isset($_POST["transf"])?1:0;
-    $outrotext  = isset($_POST["outrotext"])?1:0;
+    $postrauma  = isset($_POST["postrauma"])?1:0;
+    $samu  = isset($_POST["samu"])?1:0;
+    $semrem  = isset($_POST["semrem"])?1:0;
+    $outrotext2  = isset($_POST["outrotext2"])?'1':'0';
 
-    
-
-
-    $comando = $pdo->prepare("INSERT INTO tipo_ocorrencia VALUES ($FK_IdOcorrencia, $causado, $transporte, $desmor, $emerg, $queda2m, $suicidio, $quedaaltura, $afogamento, $agressao, $atrop, 
-    $choque, $desab, $dom, $esp, $intox, $quedabic, $quedamoto, $quedamenor2m, $trabalho, $transf, $outrotext )");
+echo("INSERT INTO prob_encont_suspeitos VALUES ($FK_IdOcorrencia, $psiquiatrico, $respiratorio, $dpoc, $inalac, $diabete, $hipog, '$outrotext1', $obstet, $parto, $gestante, $hemorrexc, $transp, $aereo, $clinico, $emerg, $postrauma, $samu, $semrem, '$outrotext2' )");
+    $comando = $pdo->prepare("INSERT INTO prob_encont_suspeitos VALUES ($FK_IdOcorrencia, $psiquiatrico, $respiratorio, $dpoc, $inalac, $diabete, $hiperg, $hipog, '$outrotext1', $obstet, $parto, $gestante, $hemorrexc, $transp, $aereo, $clinico, $emerg, $postrauma, $samu, $semrem, '$outrotext2' )");
     $resultado = $comando->execute();
 
 
-    echo ("{\"resposta\":1}");
-    $_SESSION["id"] = $pdo->lastInsertId();
-
+    if ($resultado) {
+        echo ("{\"resposta\":1}");
+    } else {
+        echo ("{\"resposta\":0}");
+    }
 ?>
