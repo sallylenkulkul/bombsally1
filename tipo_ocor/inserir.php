@@ -24,7 +24,7 @@ $FK_IdOcorrencia = $_SESSION["id"];
     $quedamenor2m  = isset($_POST["quedamenor2m"])?1:0;
     $trabalho  = isset($_POST["trabalho"])?1:0;
     $transf  = isset($_POST["transf"])?1:0;
-    $outrotext  = isset($_POST["outrotext"])?1:0;
+    $outrotext  = $_POST["outrotext"];
 
     
 

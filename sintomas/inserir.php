@@ -1,6 +1,6 @@
 <?php
 session_start();
-$FK_IdOcorrencia = $_SESSION["id"];
+$FK_IdOcorrencia = 66;//$_SESSION["id"];
 
     include("conecta.php");
 
@@ -14,10 +14,7 @@ $FK_IdOcorrencia = $_SESSION["id"];
     $bradip  = isset($_POST["bradip"])?1:0;
     $bronco  = isset($_POST["bronco"])?1:0;
     $cefaleia  = isset($_POST["cefaleia"])?1:0;
-    $cianose  = isset($_POST["cianose"])?1:0;
-
-    $labios  = isset($_POST["labios"])?1:0;
-    $ext  = isset($_POST["ext"])?1:0;
+    $cianose  = $_POST["cianose"];
 
     $conv  = isset($_POST["conv"])?1:0;
     $decort  = isset($_POST["decort"])?1:0;
@@ -28,18 +25,12 @@ $FK_IdOcorrencia = $_SESSION["id"];
     $desviotraq  = isset($_POST["desviotraq"])?1:0;
     $disp  = isset($_POST["disp"])?1:0;
     $dorlocal  = isset($_POST["dorlocal"])?1:0;
-    $edema  = isset($_POST["edema"])?1:0;
-
-    $general  = isset($_POST["general"])?1:0;
-    $local  = isset($_POST["local"])?1:0;
+    $edema  = $_POST["edema"];
 
     $enfis  = isset($_POST["enfis"])?1:0;
     $estase  = isset($_POST["estase"])?1:0;
     $face  = isset($_POST["face"])?1:0;
-    $hemorr  = isset($_POST["hemorr"])?1:0;
-
-    $interna  = isset($_POST["interna"])?1:0;
-    $externa  = isset($_POST["externa"])?1:0;
+    $hemorr  = $_POST["hemorr"];
 
     $hiper  = isset($_POST["hiper"])?1:0;
     $hipo  = isset($_POST["hipo"])?1:0;
@@ -48,10 +39,7 @@ $FK_IdOcorrencia = $_SESSION["id"];
     $obito  = isset($_POST["obito"])?1:0;
     $otorreia  = isset($_POST["otorreia"])?1:0;
     $otorragia  = isset($_POST["otorragia"])?1:0;
-    $parada  = isset($_POST["parada"])?1:0;
-
-    $card  = isset($_POST["card"])?1:0;
-    $resp  = isset($_POST["resp"])?1:0;
+    $parada  = $_POST["parada"];
 
     $ovace  = isset($_POST["ovace"])?1:0;
     $priap  = isset($_POST["priap"])?1:0;
@@ -74,21 +62,20 @@ $FK_IdOcorrencia = $_SESSION["id"];
     $taquip  = isset($_POST["taquip"])?1:0;
     $taquic  = isset($_POST["taquic"])?1:0;
     $tontura  = isset($_POST["tontura"])?1:0;
-    $outrotext  = isset($_POST["outrotext"])?1:0;
+    $outrotext  = $_POST["outrotext"];
 
 
 
     $comando = $pdo->prepare("INSERT INTO sinais_sintomas VALUES 
-    (:FK_IdOcorrencia, :abdomen, :afund, :agit, :amnesia, :angina, :apineia, :bradic, :bradip, :bronco, :cefaleia, 
-    :cianose, :labios, :ext, :conv, :decort, :deform, :descereb, :desmaio, :desviotraq, :disp, :dorlocal, :edema, :general, :local, 
-    :enfis, :estase, :face, :hemorr, :interna, :externa, :hiper, :hipo, :nausea, :nasor, :obito, :otorreia, :otorragia, :parada, :card, 
-    :resp, :ovace, :priap, :prurido, :pupilas, :anisocoria, :isocoria, :midriase, :miose, :reag, :nreag, :sede, :battle, 
-    :guax, :taquip, :taquic, :tontura, ':outrotext')");
+    ($FK_IdOcorrencia, $abdomen, $afund, $agit, $amnesia, $angina, $apineia, $bradic, $bradip, $bronco, $cefaleia, 
+    $cianose, $conv, $decort, $deform, $descereb, $desmaio, $desviotraq, $disp, $dorlocal, $edema, 
+    $enfis, $estase, $face, $hemorr, $hiper, $hipo, $nausea, $nasor, $obito, $otorreia, $otorragia, $parada, 
+    $ovace, $priap, $prurido, $pupilas, $anisocoria, $isocoria, $midriase, $miose, $reag, $nreag, $sede, $battle, 
+    $guax, $taquip, $taquic, $tontura, '$outrotext')");
     $resultado = $comando->execute();
 
 
     echo ("{\"resposta\":1}");
-    //$_SESSION["id"] = $pdo->lastInsertId();
 
 ?>
 

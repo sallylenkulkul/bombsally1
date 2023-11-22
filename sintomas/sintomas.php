@@ -31,10 +31,10 @@
                     <input type="checkbox" name="bradip" class="op"> &nbsp; Bradipnéia <br><br>
                     <input type="checkbox" name="bronco" class="op"> &nbsp; Bronco-aspirando <br><br>
                     <input type="checkbox" name="cefaleia" class="op"> &nbsp; Cefaléia <br><br>
-                    <input type="checkbox" name="cianose" class="op"> &nbsp; Cianose <br>
+                    <input type="checkbox" class="op"> &nbsp; Cianose <br>
                     <div class="opc">
-                        <input type="radio" name="labios" class="op"> &nbsp; Lábios <br>
-                        <input type="radio" name="ext" class="op"> &nbsp; Extremidade <br><br>
+                        <input type="radio" name="cianose" class="op" value="labios"> &nbsp; Lábios <br>
+                        <input type="radio" name="cianose" class="op" value="Extremidade"> &nbsp; Extremidade <br><br>
                     </div>
                    
                     <input type="checkbox" name="conv" class="op"> &nbsp; Convulsão <br><br>
@@ -46,19 +46,19 @@
                     <input type="checkbox" name="desviotraq" class="op"> &nbsp; Desvio de traquéia <br><br>
                     <input type="checkbox" name="disp" class="op"> &nbsp; Dispnéia <br><br>
                     <input type="checkbox" name="dorlocal" class="op"> &nbsp; Dor local <br><br>
-                    <input type="checkbox" name="edema" class="op"> &nbsp; Edema <br>
+                    <input type="checkbox" class="op"> &nbsp; Edema <br>
                     <div class="opc">
-                        <input type="radio" name="general" class="op1"> &nbsp; Generalizado <br>
-                        <input type="radio" name="local" class="op1"> &nbsp; Localizado <br><br>
+                        <input type="radio" name="edema" class="op1" value="generalizado"> &nbsp; Generalizado <br>
+                        <input type="radio" name="edema" class="op1" value="localizado"> &nbsp; Localizado <br><br>
                     </div>
                   
                     <input type="checkbox" name="enfis" class="op"> &nbsp; Enfisema subcutâneo <br><br>
                     <input type="checkbox" name="estase" class="op"> &nbsp; Êstase de jugular <br><br>
                     <input type="checkbox" name="face" class="op"> &nbsp; Face pálida <br><br>
-                    <input type="checkbox" name="hemorr" class="op"> &nbsp; Hemorragia <br>
+                    <input type="checkbox" class="op"> &nbsp; Hemorragia <br>
                     <div class="opc">
-                        <input type="radio" name="interna" class="op1"> &nbsp; Interna <br>
-                        <input type="radio" name="externa" class="op1"> &nbsp; Externa <br><br>
+                        <input type="radio" name="hemorr" class="op1" value="interna" > &nbsp; Interna <br>
+                        <input type="radio" name="hemorr" class="op1" value="externa"> &nbsp; Externa <br><br>
                     </div>
                     
                     <input type="checkbox" name="hiper" class="op"> &nbsp; Hipertensão <br><br>
@@ -68,10 +68,10 @@
                     <input type="checkbox" name="obito" class="op"> &nbsp; Óbito <br><br>
                     <input type="checkbox" name="otorreia" class="op"> &nbsp; Otorréia <br><br>
                     <input type="checkbox" name="otorragia" class="op"> &nbsp; Otorragia <br><br>
-                    <input type="checkbox" name="parada" class="op"> &nbsp; Parada <br>
+                    <input type="checkbox" class="op"> &nbsp; Parada <br>
                     <div class="opc">
-                        <input type="radio" name="card" class="op"> &nbsp; Cardíaca <br>
-                        <input type="radio" name="resp" class="op"> &nbsp; Respiratória <br><br>
+                        <input type="radio" name="parada" class="op" value="cardiaca"> &nbsp; Cardíaca <br>
+                        <input type="radio" name="parada" class="op" value="respiratoria"> &nbsp; Respiratória <br><br>
                     </div>
                     
                     <input type="checkbox" name="ovace" class="op"> &nbsp; O.V.A.C.E <br><br>

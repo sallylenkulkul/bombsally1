@@ -42,7 +42,7 @@
                 </div>
                 <br>
                 <div class="botao">
-                    <button type="submit" class="prox">Próximo</button>
+                    <button type="submit" class="prox" >Próximo</button>
                 </div>
             </form>
         </div>
