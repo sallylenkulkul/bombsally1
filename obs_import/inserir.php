@@ -1,7 +1,7 @@
 <?php
 session_start();
     include("conecta.php");
-    $FK_IdOcorrencia = 18; //$_SESSION["id"];
+    $FK_IdOcorrencia = $_SESSION["id"];
 
     $Observacoes  = $_POST["Observacoes"];
   

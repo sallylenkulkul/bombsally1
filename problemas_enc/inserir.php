@@ -26,7 +26,6 @@ $FK_IdOcorrencia = $_SESSION["id"];
     $semrem  = isset($_POST["semrem"])?1:0;
     $outrotext2  = isset($_POST["outrotext2"])?'1':'0';
 
-echo("INSERT INTO prob_encont_suspeitos VALUES ($FK_IdOcorrencia, $psiquiatrico, $respiratorio, $dpoc, $inalac, $diabete, $hipog, '$outrotext1', $obstet, $parto, $gestante, $hemorrexc, $transp, $aereo, $clinico, $emerg, $postrauma, $samu, $semrem, '$outrotext2' )");
     $comando = $pdo->prepare("INSERT INTO prob_encont_suspeitos VALUES ($FK_IdOcorrencia, $psiquiatrico, $respiratorio, $dpoc, $inalac, $diabete, $hiperg, $hipog, '$outrotext1', $obstet, $parto, $gestante, $hemorrexc, $transp, $aereo, $clinico, $emerg, $postrauma, $samu, $semrem, '$outrotext2' )");
     $resultado = $comando->execute();
 

@@ -14,7 +14,10 @@ $FK_IdOcorrencia = 66;//$_SESSION["id"];
     $bradip  = isset($_POST["bradip"])?1:0;
     $bronco  = isset($_POST["bronco"])?1:0;
     $cefaleia  = isset($_POST["cefaleia"])?1:0;
-    $cianose  = $_POST["cianose"];
+
+    $cianose  = isset($_POST["cianose"])?1:0;
+    $labios  = isset($_POST["labios"])?1:0;
+    $extremidade  = isset($_POST["extremidade"])?1:0;
 
     $conv  = isset($_POST["conv"])?1:0;
     $decort  = isset($_POST["decort"])?1:0;
@@ -25,12 +28,19 @@ $FK_IdOcorrencia = 66;//$_SESSION["id"];
     $desviotraq  = isset($_POST["desviotraq"])?1:0;
     $disp  = isset($_POST["disp"])?1:0;
     $dorlocal  = isset($_POST["dorlocal"])?1:0;
-    $edema  = $_POST["edema"];
 
+    $edema  = isset($_POST["edema"])?1:0;
+    $generalizado  = isset($_POST["generalizado"])?1:0;
+    $localizado  = isset($_POST["localizado"])?1:0;
+
+    
     $enfis  = isset($_POST["enfis"])?1:0;
     $estase  = isset($_POST["estase"])?1:0;
     $face  = isset($_POST["face"])?1:0;
-    $hemorr  = $_POST["hemorr"];
+
+    $hemorr  = isset($_POST["hemorr"])?1:0;
+    $interna  = isset($_POST["interna"])?1:0;
+    $externa  = isset($_POST["externa"])?1:0;
 
     $hiper  = isset($_POST["hiper"])?1:0;
     $hipo  = isset($_POST["hipo"])?1:0;
@@ -39,7 +49,10 @@ $FK_IdOcorrencia = 66;//$_SESSION["id"];
     $obito  = isset($_POST["obito"])?1:0;
     $otorreia  = isset($_POST["otorreia"])?1:0;
     $otorragia  = isset($_POST["otorragia"])?1:0;
-    $parada  = $_POST["parada"];
+
+    $parada  = isset($_POST["parada"])?1:0;
+    $cardiaca  = isset($_POST["cardiaca"])?1:0;
+    $respiratoria  = isset($_POST["respiratoria"])?1:0;
 
     $ovace  = isset($_POST["ovace"])?1:0;
     $priap  = isset($_POST["priap"])?1:0;
@@ -66,13 +79,23 @@ $FK_IdOcorrencia = 66;//$_SESSION["id"];
 
 
 
-    $comando = $pdo->prepare("INSERT INTO sinais_sintomas VALUES 
-    ($FK_IdOcorrencia, $abdomen, $afund, $agit, $amnesia, $angina, $apineia, $bradic, $bradip, $bronco, $cefaleia, 
-    $cianose, $conv, $decort, $deform, $descereb, $desmaio, $desviotraq, $disp, $dorlocal, $edema, 
-    $enfis, $estase, $face, $hemorr, $hiper, $hipo, $nausea, $nasor, $obito, $otorreia, $otorragia, $parada, 
-    $ovace, $priap, $prurido, $pupilas, $anisocoria, $isocoria, $midriase, $miose, $reag, $nreag, $sede, $battle, 
-    $guax, $taquip, $taquic, $tontura, '$outrotext')");
-    $resultado = $comando->execute();
+
+    $comando = $pdo->prepare("INSERT INTO sinais_sintomas (FK_IdOcorrencia, abdomen, afund, agit, amnesia, angina, apineia, bradic, bradip, bronco, cefaleia, 
+    cianose, labios, extremidade, conv, decort, deform, descereb, desmaio, desviotraq, disp, dorlocal, 
+    edema, generalizado, localizado, enfis, estase, face, hemorr, interna, externa, hiper, hipo, nausea, nasor, obito, otorreia, otorragia, 
+    parada, cardiaca, respiratoria, ovace, priap, prurido, pupilas, anisocoria, isocoria, 
+    midriase, miose, reag, nreag, sede, battle, 
+    guax, taquip, taquic, tontura, outrotext) VALUES 
+    (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+
+    $resultado = $comando->execute([$FK_IdOcorrencia, $abdomen, $afund, $agit, $amnesia, $angina, $apineia, $bradic, $bradip, $bronco, $cefaleia, 
+    $cianose, $labios, $extremidade, $conv, $decort, $deform, $descereb, $desmaio, $desviotraq, $disp, $dorlocal, 
+    $edema, $generalizado, $localizado, $enfis, $estase, $face, $hemorr, $interna, $externa, $hiper, $hipo, $nausea, $nasor, $obito, $otorreia, $otorragia, 
+    $parada, $cardiaca, $respiratoria, $ovace, $priap, $prurido, $pupilas, $anisocoria, $isocoria, 
+    $midriase, $miose, $reag, $nreag, $sede, $battle, 
+    $guax, $taquip, $taquic, $tontura, $outrotext]);
+
+echo ("{\"resposta\":1}");
 
 
     echo ("{\"resposta\":1}");

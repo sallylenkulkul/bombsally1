@@ -31,7 +31,7 @@ $FK_IdOcorrencia = $_SESSION["id"];
 
     $comando = $pdo->prepare("INSERT INTO tipo_ocorrencia VALUES ($FK_IdOcorrencia, $causado, $transporte, 
     $desmor, $emerg, $queda2m, $suicidio, $quedaaltura, $afogamento, $agressao, $atrop, $choque, $desab, 
-    $dom, $esp, $intox, $quedabic, $quedamoto, $quedamenor2m, $trabalho, $transf, $outrotext )");
+    $dom, $esp, $intox, $quedabic, $quedamoto, $quedamenor2m, $trabalho, $transf, '$outrotext' )");
     $resultado = $comando->execute();
 
 

@@ -29,7 +29,7 @@ while( $linhas = $comando->fetch() )
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="carimbo.css">
-    <title>Fotos do Acidente</title>
+    <title>Carimbo</title>
 </head>
 
 <body>
@@ -38,7 +38,7 @@ while( $linhas = $comando->fetch() )
     </div>
 
     <div class="titulo">
-        Carimbo
+        Profissional da Saúde <br>Receptor - Carimbo CR
     </div>
 
     <div class="profile3">

@@ -115,16 +115,16 @@ h2 {
         /* Adicionei para remover margens padrão */
     }
 
-    .titulo {
+    .titulo{
         display: flex;
         justify-content: center;
         align-items: center;
         width: 80%;
+        height: 20%;
         /* Alterei para ocupar 80% da largura */
-        margin: 40px auto 0 auto;
         max-width: 360px;
         /* Definiu uma largura máxima */
-        font-size: large;
+        font-size: medium;
         /* Alterei para um tamanho menor */
         color: white;
         background-color: #0400A4;
