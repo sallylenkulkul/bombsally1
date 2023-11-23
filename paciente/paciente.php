@@ -80,8 +80,7 @@
 				                
                 success: function(meu_json)
 				{
-					alert("Dados inseridos com sucesso!")
-                    
+					alert("window.open")
 
 				},
 				error: function(xhr, status, error) {
