@@ -53,6 +53,8 @@
                 <div class="botao">
                     <button type="submit" class="prox">Próximo</button>
                 </div>
+                <br>
+        <button href="../menu/menu.html" class="prox"> Voltar para Menu</button>
             </form>
         </div>
 

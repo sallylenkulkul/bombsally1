@@ -58,6 +58,8 @@ while( $linhas = $comando->fetch() )
                     <button type="submit" class="prox">Gravar</button>
                 </div>
                 <br><br>
+                <br>
+        <button href="../menu/menu.html" class="prox"> Voltar para Menu</button>
             </form>
 
 

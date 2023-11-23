@@ -108,8 +108,8 @@
             </form>
         </div>
 
-        <br><br>
-
+        <br>
+        <button href="../menu/menu.html" class="prox"> Voltar para Menu</button>
         </form>
     </div>
 

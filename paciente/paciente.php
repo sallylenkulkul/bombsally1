@@ -56,6 +56,8 @@
                 <div class="botao">
                     <button type="button" class="prox" onclick="Inserir()">Próximo</button>
                 </div>
+                <br>
+        <button href="../menu/menu.html" class="prox"> Voltar para Menu</button>
             </form>
         </div>
 

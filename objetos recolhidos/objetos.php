@@ -25,6 +25,8 @@
             <input type="text" class="caixa-larga" name="objetos" placeholder="Digite os objetos recolhidos...">
             <button type="submit" class="prox">Enviar</button>
         </div>
+        <br>
+        <button href="../menu/menu.html" class="prox"> Voltar para Menu</button>
         </form>
     </div>
    
