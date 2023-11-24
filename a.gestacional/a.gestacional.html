@@ -5,92 +5,95 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="a.gestacional.css">
-    <title>Document</title>
+    <title>Anamnese Gestacional</title>
 </head>
 <body>
 
     <div class="cabecalho">
         <img src="menu.png" width="350px" class="menu">
-    </div> <br> <br> <br> <br>
+    </div> <br> <br> 
 
-    <form>
+    <form action="inserir.php" method="post">
         <br> <br> <br> <br> <br> <br>
-        <div class="texto">
+        <div class="titulo">
             <h2>Anamnese Gestacional</h2>
         </div> <br> <br>  
         
-        Período da gestação: <br>
-        <input type="text" name="campo" maxlength="10" class="total">
+        Período da gestação:
+        <input type="text" name="periodo" maxlength="10" class="total">
         <br> <br> 
 
         Fez pré natal?<br>
-        <input type="radio" name="campo1" id="sim"> <label>sim</label> <br>
-        <input type="radio" name="campo1" id="nao"> <label>não</label> 
+        <input type="radio" name="prenatal" id="sim" value="Sim"> <label>Sim</label> <br>
+        <input type="radio" name="prenatal" id="nao" value="Nao"> <label>Não</label> 
+        <br> <br> 
+
+        Nome do Médico:
+        <input type="text" name="medico" maxlength="10" class="total">
         <br> <br> 
 
         Existe possibilidade de complicações?<br>
-        <input type="radio" name="campo2" id="sim"> <label>sim</label> <br>
-        <input type="radio" name="campo2" id="nao"> <label>não</label> 
+        <input type="radio" name="complic" id="sim" value="Sim"> <label>Sim</label> <br>
+        <input type="radio" name="complic" id="nao" value="Nao"> <label>Não</label> 
         <br> <br> 
 
         É o primeiro filho?<br>
-        <input type="radio" name="campo3" id="sim"> <label>sim</label> <br>
-        <input type="radio" name="campo3" id="nao"> <label>não</label> 
-        <br> <br> 
-        
-        Quantos? <br>
-        <input type="text" name="texto1" maxlength="10" class="total">
+        <input type="radio" name="filho" id="sim" value="Sim"> <label>Sim</label> <br>
+        <input type="radio" name="filho" id="nao" value="Nao"> <label>Não</label> 
+        <br>  
+        Quantos? 
+        <input type="text" name="quantos" maxlength="10" class="total">
         <br> <br> 
 
-        Que horas iniciaram as contrações? <br>
-        <input type="text" name="texto2" maxlength="10" class="total">
+        Que horas iniciaram as contrações? 
+        <input type="text" name="contracoes" maxlength="10" class="total">
         <br> <br> 
-        Tempo das contrações:<br> <br>
+        Tempo das Contrações<br>
         <div class="sub">
-        Duração: <br>
-        <input type="text" name="texto3" maxlength="10" class="total">
-        <br> <br> 
-        Intervalo: <br>
-        <input type="text" name="texto4" maxlength="10" class="total">
+        Duração:
+        <input type="text" name="duracao" maxlength="10" class="total">
+        <br> 
+        Intervalo:
+        <input type="text" name="intervalo" maxlength="10" class="total">
         </div> <br>
         
         Sente pressão na região do quadril ou vontade de evacuar? <br>
-        <input type="radio" id="ad" name="campo4"> <label for="ad">Sim</label><br>
-        <input type="radio" id="ad" name="campo4"> <label for="ad">Não</label><br>
+        <input type="radio" id="ad" name="pressao" value="Sim"> <label for="ad">Sim</label><br>
+        <input type="radio" id="ad" name="pressao" value="Nao"> <label for="ad">Não</label><br>
         <br>
 
         Já houve ruptura da bolsa? <br>
-        <input type="radio" id="ad" name="campo5"> <label for="ad">Sim</label><br>
-        <input type="radio" id="ad" name="campo5"> <label for="ad">Não</label><br>
+        <input type="radio" id="ad" name="ruptura" value="Sim"> <label for="ad">Sim</label><br>
+        <input type="radio" id="ad" name="ruptura" value="Nao"> <label for="ad">Não</label><br>
         <br>
         
         Foi feito inspeção visual? <br>
-        <input type="radio" id="ad" name="campo6"> <label for="ad">Sim</label><br>
-        <input type="radio" id="ad" name="campo6"> <label for="ad">Não</label><br>
+        <input type="radio" id="ad" name="inspecao" value="Sim"> <label for="ad">Sim</label><br>
+        <input type="radio" id="ad" name="inspecao" value="Nao"> <label for="ad">Não</label><br>
         <br>
 
         Parto realizado? <br>
-        <input type="radio" id="ad" name="campo7"> <label for="ad">Sim</label><br>
-        <input type="radio" id="ad" name="campo7"> <label for="ad">Não</label><br>
+        <input type="radio" id="ad" name="parto" value="Sim"> <label for="ad">Sim</label><br>
+        <input type="radio" id="ad" name="parto" value="Nao"> <label for="ad">Não</label><br>
         <br>
 
-        Hora do nascimento: <br>
-        <input type="text" name="texto5" maxlength="10" class="total">
+        Hora do nascimento: 
+        <input type="text" name="hora" maxlength="10" class="total">
         </div> <br> <br>
         
-    
+
         Sexo do bebê <br>
-        <input type="radio" id="ad" name="campo8"> <label for="ad">Feminino</label><br>
-        <input type="radio" id="ad" name="campo8"> <label for="ad">Masculino</label><br>
+        <input type="radio" id="ad" name="sexo" value="M" &nbsp;> <label for="ad">Masculino</label><br>
+        <input type="radio" id="ad" name="sexo" value="F" &nbsp;> <label for="ad">Feminino</label><br>
         <br>
 
-        Nome do bebê: <br>
-        <input type="text" name="texto6" maxlength="500" class="total">
+        Nome do bebê: 
+        <input type="text" name="nome" maxlength="500" class="total">
         <br> <br> 
 
-        <button type="submit">Próximo</button>
+        <button type="submit" class="prox">Próximo</button>
         <br>
-        <button href="../menu/menu.html" class="prox"> Voltar para Menu</button>
+        <button href="../menu/menu.html" class="voltarmenu"> Voltar para Menu</button>
     </form>
 </body>
 </html>

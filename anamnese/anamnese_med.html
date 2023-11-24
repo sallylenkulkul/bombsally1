@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="anamnese_med.css">
-    <title>Anamnese de Emergencia Medica</title>
+    <title>Anamnese da Emergência Médica</title>
 </head>
 <body>
 
@@ -12,68 +12,66 @@
         <img src="menu.png" width="350px" class="menu">
     </div> <br> <br> <br> <br>
 
-    <form>
-        <br> <br> <br> <br> <br> <br>
-        <div class="texto">
-            <h2>Anamnese de Emergência Médica</h2>
+    <form action="inserir.php" method="post">
+        <br> <br> <br> <br> <br> <br> 
+        <div class="titulo">
+            <h2>Anamnese da <br>Emergência Médica</h2>
         </div> <br> <br>  
 
         O que aconteceu? (sinais e sintomas) <br>
-        <input type="text" name="total" maxlength="10" class="total">
+        <input type="text" name="aconteceu" maxlength="10" class="total">
         <br> <br> 
 
-        <label>Acontenceu outras vezes?</label><br>
-        <input type="radio" name="campo1" id="sim"> <label>sim</label> <br>
-        <input type="radio" name="campo1" id="nao"> <label>não</label> 
+        Acontenceu outras vezes?<br>
+        <input type="radio" name="outras" id="sim" value="Sim">Sim
+        <input type="radio" name="outras" id="nao" value="Nao"> Não
         <br> <br> 
 
-        A quanto tempo isso aconteceu? <br>
-        <input type="text" name="total" maxlength="10" class="total">
+        Há quanto tempo isso aconteceu? <br>
+        <input type="text" name="tempo" maxlength="10" class="total">
         <br> <br> 
 
-        <label>Possui algum problema de saúde?</label><br>
-        <input type="radio" name="campo1" id="sim"> <label>sim</label> <br>
-        <input type="radio" name="campo1" id="nao"> <label>não</label> 
-        <br> <br> 
-
+        Possui algum problema de saúde?<br>
+        <input type="radio" name="prob" id="sim" value="Sim"> Sim
+        <input type="radio" name="prob" id="nao" value="Nao"> Não
+        <br> 
         Quais? <br>
-        <input type="text" name="total" maxlength="10" class="total">
+        <input type="text" name="quais" maxlength="10" class="total">
         <br> <br> 
 
-        <label>Faz uso de medicação?</label><br>
-        <input type="radio" name="campo1" id="sim"> <label>sim</label> <br>
-        <input type="radio" name="campo1" id="nao"> <label>não</label> 
-        <br> <br> 
-
+        Faz uso de medicação?<br>
+        <input type="radio" name="medic" id="sim" value="Sim"> Sim
+        <input type="radio" name="medic" id="nao" value="Nao"> Não
+        <br>  
         Quais? <br>
-        <input type="text" name="total" maxlength="10" class="total">
+        <input type="text" name="quais2" maxlength="10" class="total">
         <br> <br> 
 
-        Horário da última medicação: <br>
-        <input type="text" name="total" maxlength="10" class="total">
+        Horário da última medicação:
+        <input type="text" name="horario" maxlength="10" class="total">
         <br> <br> 
 
-        <label>Alérgico a alguma coisa?</label><br>
-        <input type="radio" name="campo1" id="sim"> <label>sim</label> <br>
-        <input type="radio" name="campo1" id="nao"> <label>não</label> 
-        <br> <br> 
-
-        Especifique: <br>
-        <input type="text" name="total" maxlength="10" class="total">
-        <br> <br> 
-
-        <label>Ingeriu alimento ou líquido >6horas?</label><br>
-        <input type="radio" name="campo1" id="sim"> <label>sim</label> <br>
-        <input type="radio" name="campo1" id="nao"> <label>não</label> 
-        <br> <br> 
-
-        Que horas? <br>
-        <input type="text" name="total" maxlength="10" class="total">
-        <br> <br> 
-
-        <button type="submit">Próximo</button>
+        Alérgico a alguma coisa?<br>
+        <input type="radio" name="alergico" id="sim" value="Sim">Sim
+        <input type="radio" name="alergico" id="nao" value="Nao">Não
         <br>
-        <button href="../menu/menu.html" class="prox"> Voltar para Menu</button>
+        Especifique:
+        <input type="text" name="espec" maxlength="10" class="total">
+        <br> <br> 
+
+        Ingeriu alimento ou líquido >6horas?<br>
+        <input type="radio" name="inger" id="sim" value="Sim"> Sim
+        <input type="radio" name="inger" id="nao" value="Nao"> Não
+        <br> 
+        Que horas?
+        <input type="text" name="horas" maxlength="10" class="total">
+        <br> <br> 
+
+        <button type="submit" class="prox">Próximo</button>
+        <br>
+        <button href="../menu/menu.html" class="voltarmenu"> Voltar para Menu</button>
+        <br>
+    
     </form>
 
     <script src="script.js"></script>

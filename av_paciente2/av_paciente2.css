@@ -12,31 +12,33 @@ body {
     font-weight: bold;
 }
 
-.texto {
-    width: 280px;
-    height: 40px;
-    color: rgb(0, 0, 0);
-    display: flex;
-    font-family: sans-serif;
-    font-weight: bolder;
-    font-size: small;
-    border-radius: 10px;
-    justify-content: center;
-    align-items: center;
-    margin-left: 5px;
+
+
+h2 {
+    width: 250px;
+    height: 25px;
+    color: white;
+    background-color:#0400A4;
+    max-width: 350px;
+    font-weight: bold;
+    font-size: x-large;
+    border-radius: 70px;
+    margin: 0 auto;
+    text-decoration: underline;
+    padding: 10px;
     text-align: center;
-    padding: 0.5em;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+h3 {
+    font-weight: bold;
     text-decoration: underline;
 }
 
-h2 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
 .total {
-    width: 5em;
+    width: 8em;
     margin-top: 9px;
     margin-left: 5px;
     border-top: none;
@@ -47,31 +49,53 @@ h2 {
     font-size: 1em;
     outline: none;
 }
-
-button {
-    width: 200px;
-    height: 53px;
+.prox {
+    width: 120px;
+    height: 30px;
+    background-color: #0400A4;
     border: none;
     color: white;
-    background: rgb(212, 31, 31);
-    background: linear-gradient(0deg, rgba(212, 31, 31, 1) 26%, rgba(141, 25, 28, 1) 100%);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);    
+    font-family: 'Poppins', sans-serif;
     text-align: center;
-    font-size: 15px;
+    font-size: 14px;
     border-radius: 25px;
     cursor: pointer;
-    font-family: 'Poppins', sans-serif;
     display: flex;
-    flex-direction: column;
-    align-items: center;
     margin: 0 auto;
-    font-weight: bold;
+    max-width: 180px;
     justify-content: center;
+    align-items: center;
+    font-weight: bold;
 }
-button:hover {
-    background: linear-gradient(0deg, rgb(126, 18, 18) 26%, rgba(141, 25, 28, 1) 100%);
 
+.voltarmenu {
+    width: 150px;
+    height: 30px;
+    border: none;
+    background-color: #f8e9ed;
+    color: #0400A4;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    font-size: 14px;
+    border-radius: 25px;
+    cursor: pointer;
+    display: flex;
+    margin: 0 auto;
+    max-width: 180px;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    text-decoration: underline;
 }
+
+.prox:hover {
+    background:rgb(126, 18, 18);
+}
+
+.voltarmenu:hover {
+    color:rgb(126, 18, 18);
+}
+
 
 .cabecalho {
     position: fixed; /* Adicionando esta linha */

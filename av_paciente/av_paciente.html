@@ -25,22 +25,23 @@
 
     <form id="form1">
         <br>
-        <div class="texto">
+        <div class="titulo">
             <h2>Avaliação do Paciente </h2>
+            <h5>(Glasglow)</h5>
         </div> 
-        <div class="texto2">
-            <h4>(Glasglow)</h4>
-        </div>
+        
     <br>
         <div class="forms">
-            <strong>Nível de Consciência:</strong> <br>
-            <input type="radio" name="o" value="maiores"> Maiores de 5 anos <br>
-            <input type="radio" name="o" value="menores"> Menores de 5 anos
+            <h4>Nível de Consciência</h4>
+            <div class="nivel">
+                <input type="radio" class="nivel" name="o" value="maiores"> Maiores de 5 anos <br>
+                <input type="radio" class="nivel" name="o" value="menores"> Menores de 5 anos
+            </div>
         </div>
-        
-        <input type="button" class="button" name="enviar" value="Enviar" onclick="redirecionar();" />
         <br>
-        <button href="../menu/menu.html" class="prox"> Voltar para Menu</button>
+        <input type="button" class="prox" name="enviar" value="Próximo" onclick="redirecionar();" />
+        <br>
+        <button href="../menu/menu.html" class="voltarmenu"> Voltar para Menu</button>
     </form>
 
 </body>
